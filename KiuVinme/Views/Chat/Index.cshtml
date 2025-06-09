@@ -1,0 +1,111 @@
+﻿@{
+Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KiuVinme Chat Test</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="main-container">
+    <!-- Left Media Widget -->
+    <div class="media-widget" id="widget1">
+        <div id="container1">
+            <div class="content-placeholder" id="placeholder1">
+                Loading content...
+            </div>
+        </div>
+        <div class="media-info">
+            <div id="title1"></div>
+        </div>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <!-- Header -->
+        <div class="chat-header">
+            <h3>
+                <span id="statusIndicator" class="status-indicator status-disconnected"></span>
+                <span id="statusText">KiuVinme Chat</span>
+            </h3>
+            <div class="stats-bar">
+                <span id="statsDisplay">Connecting...</span>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="chat-messages" id="messagesContainer">
+            <div class="message system">
+                <div class="message-bubble">
+                    Welcome to KiuVinme Chat! Connecting you with random people...
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <div class="row align-items-center">
+                <div class="col">
+                    <input type="text" id="messageInput" class="form-control message-input"
+                           placeholder="Type your message..." disabled>
+                </div>
+                <div class="col-auto">
+                    <button class="sticker-toggle" id="stickerToggle" title="Stickers" disabled>
+                        <i class="fas fa-smile"></i>
+                    </button>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-primary" id="sendButton" disabled>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-danger" id="nextChatButton" disabled>
+                        <i class="fas fa-forward"></i> Next
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticker Panel -->
+        <div class="sticker-panel" id="stickerPanel" style="display: none;">
+            <div class="sticker-pack-tabs" id="stickerPackTabs">
+                <!-- Sticker pack tabs will be loaded here -->
+            </div>
+            <div class="sticker-grid" id="stickerGrid">
+                <!-- Stickers will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Media Widget -->
+    <div class="media-widget" id="widget2">
+        <div id="container2">
+            <div class="content-placeholder" id="placeholder2">
+                Loading content...
+            </div>
+        </div>
+        <div class="media-info">
+            <div id="title2"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Connection Logs -->
+<div class="connection-logs mobile-hidden" id="connectionLogs">
+    <div class="log-entry info">Initializing chat system...</div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.10/signalr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="/js/mediaLoader.js"></script>
+<script src="/js/chat.js"></script>
+</body>
+</html>

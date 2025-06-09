@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticker Admin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/admin.css">
+</head>
+<body>
+<div class="admin-container">
+    <h1 class="mb-4">Sticker Pack Administration</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Actions</h5>
+                </div>
+                <div class="card-body">
+                    <button id="populateBtn" class="btn btn-primary mb-3">
+                        📦 Populate Stickers from Folders
+                    </button>
+                    <br>
+                    <button id="refreshBtn" class="btn btn-info mb-3">
+                        🔄 Refresh Sticker Packs
+                    </button>
+                    <br>
+                    <button id="infoBtn" class="btn btn-secondary mb-3">
+                        📊 Show Console Info
+                    </button>
+                    <br>
+                    <button id="deleteAllBtn" class="btn btn-danger mb-3">
+                        🗑️ Delete All Packs
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Status</h5>
+                </div>
+                <div class="card-body">
+                    <div id="statusArea" class="alert alert-info">
+                        Ready to manage stickers
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h3>Current Sticker Packs</h3>
+        <div id="stickerPacksContainer">
+            <p class="text-muted">Click "Refresh Sticker Packs" to load current packs</p>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/AdminSticker.js"></script>
+</body>
+</html>

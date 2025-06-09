@@ -1,0 +1,26 @@
+﻿body {
+    background: #f8f9fa;
+    padding: 20px;
+}
+.admin-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.video-preview {
+    width: 200px;
+    height: 150px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.ad-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background: #f8f9fa;
+}

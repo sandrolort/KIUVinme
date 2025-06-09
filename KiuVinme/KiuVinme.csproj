@@ -1,0 +1,231 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>KiuWho</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="9.0.4" />
+      <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.Json" Version="9.0.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.5">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.5">
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\app.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\favicon.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757649.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757650.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757651.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757652.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757653.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757654.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757655.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757656.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757657.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757658.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757659.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757660.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757661.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757662.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757663.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757664.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757665.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757666.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757667.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757668.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757669.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757670.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757671.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757672.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757673.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757674.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757675.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757676.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757677.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757678.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757679.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757680.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757681.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757682.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757683.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757684.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757685.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757686.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757687.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757688.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757689.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757690.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757691.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757692.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757693.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757694.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757695.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757696.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757697.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757698.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757699.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757700.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757701.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757702.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757703.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757704.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757705.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757706.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757707.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757708.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757709.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757710.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757711.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757712.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757713.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757714.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757715.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757716.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757717.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757718.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\beecat_port\webp\file_154757719.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757965.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757966.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757967.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757968.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757969.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757970.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757971.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757972.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757973.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757974.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757975.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757976.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757977.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757978.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757979.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757980.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757981.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757982.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757983.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757984.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757985.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757986.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757987.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757988.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757989.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757990.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757991.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757992.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757993.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757994.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757995.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757996.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757997.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757998.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154757999.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758000.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758001.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758002.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758003.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758004.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758005.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758006.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758007.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758008.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758009.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758010.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758011.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758012.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758013.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758014.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758015.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758016.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758017.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758018.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758019.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758020.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758021.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758022.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758023.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758024.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758025.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758026.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758027.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758028.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758029.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758030.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758031.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758032.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758033.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758034.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758036.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758037.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758038.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758039.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758040.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758041.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758042.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758043.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758044.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\stickers\linehd_frown_cat\webp\file_154758045.webp" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\images\stickers\" />
+      <Folder Include="wwwroot\media\" />
+    </ItemGroup>
+
+</Project>
