@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>KiuWho</RootNamespace>
+        <CopyOutputSymbolsToPublishDirectory>false</CopyOutputSymbolsToPublishDirectory>
     </PropertyGroup>
 
     <ItemGroup>
@@ -225,6 +226,11 @@
     <ItemGroup>
       <Folder Include="wwwroot\images\stickers\" />
       <Folder Include="wwwroot\media\" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <None Include="wwwroot\js\**" CopyToPublishDirectory="PreserveNewest" />
+      <None Include="wwwroot\css\**" CopyToPublishDirectory="PreserveNewest" />
     </ItemGroup>
 
 </Project>
