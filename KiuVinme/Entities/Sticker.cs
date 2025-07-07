@@ -11,9 +11,9 @@ public class Sticker
     [ForeignKey(nameof(StickerPack))]
     public Guid StickerPackUid { get; set; }
     
-    public string ImageUrl { get; set; } = null!;
+    public required string ImageUrl { get; set; }
     
-    public string DisplayName { get; set; } = null!;
+    public required string DisplayName { get; set; }
     
     public int DisplayOrder { get; set; }
     public StickerPack StickerPack { get; set; } = null!;
