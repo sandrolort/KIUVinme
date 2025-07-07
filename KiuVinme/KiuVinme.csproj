@@ -23,9 +23,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="wwwroot\css\**" />
-      <Content Include="wwwroot\js\**" />
-      <_ContentIncludedByDefault Remove="wwwroot\app.css" />
       <_ContentIncludedByDefault Remove="wwwroot\favicon.png" />
       <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
       <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
