@@ -14,14 +14,23 @@ builder.Services.AddScoped<StickerPackServices>();
 builder.Services.AddScoped<StickerServices>();
 builder.Services.AddScoped<MediaServices>();
 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+if (builder.Environment.IsProduction())
+{
+    connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
+}
 builder.Services.AddDbContext<ChatContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(connectionString));
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("ChatPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:5000", "https://localhost:5001")
+        var allowedOrigins = builder.Environment.IsProduction() 
+            ? Environment.GetEnvironmentVariable("ALLOWED_ORIGINS")?.Split(',') ?? new[] { "*" }
+            : new[] { "http://localhost:5000", "https://localhost:5001" };
+        
+        policy.WithOrigins(allowedOrigins)
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
@@ -56,4 +65,5 @@ app.MapControllers();
 
 app.MapRazorPages();
 
-app.Run();
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+app.Run($"http://0.0.0.0:{port}");
