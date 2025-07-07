@@ -7,7 +7,7 @@ public class StickerPack
     [Key]
     public Guid Uid { get; set; }
     
-    public required string Name { get; set; }
+    public string Name { get; set; } = null!;
     
     public DateTime CreateAt { get; set; } = DateTime.Now;
     
